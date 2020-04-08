@@ -1,0 +1,42 @@
+{
+    "pages": [
+        "pages/home/index",
+        "pages/home/article",
+        "pages/user/index",
+        "pages/user/about",
+        "pages/user/collection_list",
+        "pages/user/recent_view",
+        "pages/user/update_log",
+        "pages/other/requestTimeOut"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "YoungBlog",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#0081ff",
+        "color": "#333",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "text": "首页",
+                "iconPath": "imgs/home.png",
+                "selectedIconPath": "imgs/home_fill.png"
+            },
+            {
+                "pagePath": "pages/user/index",
+                "text": "你的",
+                "iconPath": "imgs/user.png",
+                "selectedIconPath": "imgs/user_fill.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 30000
+    },
+    "sitemapLocation": "sitemap.json"
+}
