@@ -1,5 +1,7 @@
 # YoungBlog
-微信小程序版博客**（以上源码只包含小程序部分，后台需要自己搭建）**
+微信小程序版博客 
+
+**（以上源码只包含小程序部分，后台需要自己搭建）**
 
 ## 微信扫码预览
 
@@ -7,9 +9,7 @@
 
 ## 截图预览
 
-![pic](https://www.liujiayang.cn/psyduck/1.jpg)
-![pic](https://www.liujiayang.cn/psyduck/2.jpg)
-![pic](https://www.liujiayang.cn/psyduck/3.jpg)
+![pic](https://www.liujiayang.cn/psyduck/1.jpg){:height="420px" width="100px"}![pic](https://www.liujiayang.cn/psyduck/2.jpg){:height="420px" width="100px"}![pic](https://www.liujiayang.cn/psyduck/3.jpg){:height="420px" width="100px"}
 
 ### 搭建：
 
