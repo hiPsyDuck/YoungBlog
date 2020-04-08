@@ -7,10 +7,6 @@
 
 ![QRCode](https://www.liujiayang.cn/psyduck/gh_81a98266fb8e_344.jpg)
 
-## 截图预览
-
-![pic](https://www.liujiayang.cn/psyduck/1.jpg)![pic](https://www.liujiayang.cn/psyduck/2.jpg)![pic](https://www.liujiayang.cn/psyduck/3.jpg)
-
 ### 搭建：
 
 app.js 文件内：
