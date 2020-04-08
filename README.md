@@ -9,7 +9,7 @@
 
 ## 截图预览
 
-![pic-w150](https://www.liujiayang.cn/psyduck/1.jpg =)![pic-w150](https://www.liujiayang.cn/psyduck/2.jpg)![pic-w150](https://www.liujiayang.cn/psyduck/3.jpg)
+![pic](https://www.liujiayang.cn/psyduck/1.jpg)![pic](https://www.liujiayang.cn/psyduck/2.jpg)![pic](https://www.liujiayang.cn/psyduck/3.jpg)
 
 ### 搭建：
 
