@@ -1,0 +1,58 @@
+<view class="flex" wx:if="{{!is_show_page}}">
+    <view class='bg-white flex-sub radius gif-loading'>
+        <image src='../../imgs/loading-white.gif' mode='aspectFit' class='gif-white response' style='height:240rpx'></image>
+    </view>
+</view>
+
+<block wx:if="{{is_show_page}}">
+    <scroll-view scroll-x class="bg-white nav" style='box-shadow: 0rpx 3rpx 50rpx 0rpx rgba(0, 0, 0, 0.07);'>
+        <view class='flex text-center'>
+            <view class="cu-item flex-sub {{currentTab==0?'text-blue':''}}" data-current="0" bindtap='check_cate' data-currentIndex='0'>
+                全部
+            </view>
+            <view class="cu-item flex-sub {{item.cate_id==currentTab?'text-blue':''}}" wx:for="{{svr_data.cateList}}" wx:key="categories" bindtap='check_cate' data-currentIndex='{{index+1}}' data-current="{{item.cate_id}}">
+                {{item.cate_name}}
+            </view>
+        </view>
+    </scroll-view>
+    <view style='height:50px'></view>
+
+    <block wx:if="{{articles}}">
+        <view class="cu-card case ">
+            <view wx:for="{{articles}}" wx:key="articles" class="cu-item shadow" bindtap='toArticle' data-a_id="{{item.a_id}}">
+                <view class='image'>
+                    <image wx:if="{{item.img}}" src='{{svr_url}}{{item.img}}' mode="widthFix"></image>
+                    <view class='cu-bar bg-shadeBottom bg-bottom3'>{{item.title}}</view>
+                </view>
+                <view class="cu-list menu">
+                    <view class="cu-item">
+                        <view class='content flex-sub'>
+                            <view class='text-ivew item-intro' wx:if="{{item.intro}}">{{item.intro}}</view>
+                            <view class='text-gray text-sm flex justify-between'>
+                                <view class="text-gray text-sm">
+                                    <text class="icon-calendar lg text-gray"></text> {{item.add_time}}
+                                    <text class="icon-attention item-icon lg text-gray"></text> {{item.hit}}
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="flex padding justify-center half-center">
+            <view class='padding-sm margin-xs radius'>
+                <text class="icon-emoji lg text-gray"></text> 
+				<text class='lg text-gray'> 什么都没有</text>	            
+			</view>
+        </view>
+    </block>
+
+    <view class='go_top' bindlongpress='longPress' bindtap="goTop" hidden="{{goTopHidden}}">
+        <image src="../../imgs/top.png" mode="widthFix"></image>
+    </view>
+
+    <!-- <view class="cu-load {{!loading?'loading':'over'}}"></view> -->
+    <view style='height:10px'></view>
+</block>

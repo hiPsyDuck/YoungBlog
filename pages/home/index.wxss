@@ -1,0 +1,45 @@
+
+.item-intro{
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+	padding-top: 3px;
+}
+
+.item-icon{
+	padding-left: 20px
+}
+
+.text-ivew{
+	color: #707786;
+	font-size: 14px
+}
+
+
+
+/************返回顶部******************/
+
+.go_top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    width: 70rpx;
+    height: 70rpx;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1), -1px -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.go_top image {
+    width: 70rpx;
+    height: 70rpx;
+    margin: auto 0;
+    display: block;
+}
+
+.bg-bottom3{
+	bottom: 7rpx!important
+}

@@ -1,0 +1,23 @@
+<view class="flex" wx:if="{{!is_show_page}}">
+    <view class='bg-white flex-sub radius gif-loading'>
+        <image src='../../imgs/loading-white.gif' mode='aspectFit' class='gif-white response' style='height:240rpx'></image>
+    </view>
+</view>
+
+<block wx:if="{{is_show_page}}">
+
+    <view class='bg-white padding-lr padding-top-xl'>
+        <view class='padding-xs flex align-center padding-top-xl'>
+            <view class='flex-sub text-center'>
+                <view class='text-xxl padding'>
+                    <text class=' icon-emoji text-yellow'></text>
+                </view>
+                <view class='padding'>这是一个兴趣使然的小程序</view>
+				<view class='padding'>联系作者：</view>
+				<view class='padding'>邮箱：6jiayang@gmail.com</view>
+				<view class='padding'>微信：ljy910135002</view>
+            </view>
+        </view>
+    </view>
+
+</block>

@@ -1,0 +1,154 @@
+<view class="flex" wx:if="{{!is_show_page}}">
+    <view class='bg-white flex-sub radius gif-loading'>
+        <image src='../../imgs/loading-white.gif' mode='aspectFit' class='gif-white response' style='height:240rpx'></image>
+    </view>
+</view>
+
+<block wx:if="{{is_show_page}}">
+    <view class="cu-bar bg-white">
+        <view class='action sub-title'>
+            <text class='text-xl text-black text-bold'>{{svr_data.info.title}}</text>
+            <text class='bg-blue'></text>
+            <!-- last-child选择器-->
+        </view>
+    </view>
+    <view class='all_page'>
+        <view class='head'>
+            <view class='page_date text-sm'>
+                <text class="icon-calendar lg text-gray"></text>
+                <text class="text-gray">{{svr_data.info.add_time}}</text>
+            </view>
+            <view class='page_view text-sm'>
+                <text class="icon-attention lg text-gray"></text>
+                <text class="text-gray">{{svr_data.info.hit}}</text>
+            </view>
+        </view>
+        <view class='page_content'>
+            <view class='page_img' wx:if="{{svr_data.info.img_in_info==1}}">
+                <image src='{{svr_url}}{{svr_data.info.img}}' mode='widthFix'></image>
+            </view>
+            <view class='article'>
+                <import src="../../towxml/entry.wxml" />
+                <template is="entry" data="{{...article}}" />
+            </view>
+        </view>
+    </view>
+    <!-- 正文结束 -->
+    <view style='height:10px;background:#f8f8f8'></view>
+
+    <!-- 评论区 start -->
+    <view id='comment_view'>
+        <block wx:if="{{svr_data.comment_list}}">
+            <view class="cu-bar bg-white padding-top-sm padding-bottom-sm">
+                <view class='action'>
+                    <text class='icon-title text-blue'></text>共{{svr_data.comment_count}}条评论
+                </view>
+            </view>
+            <!-- ------------- -->
+            <view class="cu-list menu menu-avatar comment solids-top {{isIPX?'more-bottom-view-IPX':''}}">
+                <view class="cu-item" wx:for="{{svr_data.comment_list}}" wx:key="comment_list">
+                    <view class="cu-avatar my radius" style="background-image:url({{item.headimgurl}});"></view>
+                    <view class='content'>
+                        <view class='text-grey'>{{item.nickname}}
+                            <view wx:if="{{item.user_id==10000}}" class='cu-tag line-blue sm'>站长</view>
+                        </view>
+                        <view class='text-other text-content text-df'>
+                            {{item.comment}}
+                        </view>
+                        <view class='margin-top-sm flex justify-between'>
+                            <view class='flex justify-between'>
+                                <view class='text-gray text-df'>{{item.add_time}}</view>
+                            </view>
+                            <view>
+                                <button class="icon-messagefill text-gray margin-left-sm messBtn" bindtap="{{needLogin?'resendComment':''}}" data-title="{{item.nickname}}" open-type="{{!needLogin?'getUserInfo':''}}" bindgetuserinfo="{{!needLogin?'userLogin':''}}" lang="zh_CN" data-type='3'></button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="padding-xs flex align-center {{isIPX?'more-bottom-view-IPX':''}}">
+                <view class='flex-sub text-center'>
+                    <view class='padding text-gray'>暂无评论</view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <block wx:if="{{commentHidden}}">
+        <view class="comment_input_cover" bindtap='comment'></view>
+        <view class="comment_input">
+            <view class="cu-bar bg-white" bindtap='comment'>
+                <view class='action'>
+                    <text>友善的评论是交流的起点</text>
+                </view>
+            </view>
+            <form bindsubmit="submit_comment" report-submit="true">
+                <view class="cu-bar search bg-white">
+                    <view class='search-form round'>
+                        <text class="icon-emoji"></text>
+                        <input type="text" name="comments" adjust-position="true" placeholder="{{phText?phText:'说点什么'}}" focus="true" confirm-hold="true" cursor-spacing="10px"></input>
+                    </view>
+                    <view class='action'>
+                        <button form-type="submit" class='cu-btn bg-green shadow-blur round'>提交</button>
+                    </view>
+                </view>
+            </form>
+        </view>
+    </block>
+    <!-- 评论区 end -->
+
+    <view style="height:49px"></view>
+
+    <!-- 以下脚部按钮 ok -->
+    <view class="page_foot {{isIPX?'feed-bottom-view-IPX':''}}">
+        <view class="cu-bar tabbar bg-white">
+            <button class="action" bindtap='back'>
+                <view class='icon-cu-image'>
+                    <text class="icon-back lg text-gray"></text>
+                </view>
+                <view class='text-gray'>返回</view>
+            </button>
+            <button class="action" bindtap="{{needLogin?'comment':''}}" open-type="{{!needLogin?'getUserInfo':''}}" bindgetuserinfo="{{!needLogin?'userLogin':''}}" lang="zh_CN" data-type='1'>
+                <view class='icon-cu-image'>
+                    <text class="icon-comment lg text-gray"></text>
+                </view>
+                <view class='text-gray'>评论</view>
+            </button>
+            <button class="action" bindtap='toComment'>
+                <view class='icon-cu-image'>
+                    <text class="icon-community lg text-gray"></text>
+                    <view class='cu-tag badge' wx:if="{{svr_data.comment_count>0}}">{{svr_data.comment_count}}</view>
+                </view>
+                <view class='text-gray'>看评</view>
+            </button>
+            <button class="action" bindtap="{{needLogin?'collection':''}}" open-type="{{!needLogin?'getUserInfo':''}}" bindgetuserinfo="{{!needLogin?'userLogin':''}}" lang="zh_CN" data-type='2'>
+                <view class='icon-cu-image'>
+                    <text class="icon-{{collection==0?'favor':'favorfill'}} lg text-{{collection==0?'gray':'blue'}}"></text>
+                </view>
+                <view class='text-gray'>收藏</view>
+            </button>
+            <button class="action" open-type='share'>
+                <view class='icon-cu-image'>
+                    <text class="icon-share lg text-gray"></text>
+                </view>
+                <view class='text-gray'>分享</view>
+            </button>
+        </view>
+    </view>
+
+    <view class="cu-modal bottom-modal {{is_modal?'show':''}}" bindtap='hideModal'>
+        <view class="cu-dialog {{isIPX?'feed-bottom-view-IPX':''}}">
+            <view class="cu-bar bg-white">
+                <view class='action text-gray' bindtap='hideModal'>算了</view>
+                <view class='action text-blue' bindtap="{{needLogin?comment:''}}">{{needLogin?'重写':'好吧'}}</view>
+            </view>
+            <view class='padding-xl'>
+                微信授权登录后才能使用这个功能哦
+            </view>
+        </view>
+    </view>
+
+
+</block>

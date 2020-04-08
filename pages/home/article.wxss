@@ -1,0 +1,236 @@
+/**基础风格样式**/
+@import '../../towxml/style/main.wxss';
+
+/**如果页面有动态主题切换，则需要将使用到的样式全部引入**/
+
+/**主题配色（浅色样式）**/
+@import '../../towxml/style/theme/light.wxss';
+
+/**主题配色（深色样式）**/
+
+/* @import '/towxml/style/theme/dark.wxss'; */
+
+page {
+    height: 100%;
+}
+
+.all_page {
+    width: 93%;
+    margin: 0 auto;
+    min-height: 450px;
+}
+
+.head {
+    width: 100%;
+    position: relative;
+    margin-top: 2%;
+    padding-bottom: 15rpx;
+    border-bottom: 1px #f8f8f8 solid;
+}
+
+.head .page_title {
+    padding-bottom: 3%;
+    width: 100%;
+    line-height: 32px;
+}
+
+.head .page_title text {
+    font-weight: 500;
+    font-size: 20px;
+    word-break: break-all;
+}
+
+.head .page_date {
+    display: inline-block;
+}
+
+.head .page_date text {
+    margin-left: 3px;
+}
+
+.head .page_view {
+    display: inline-block;
+    margin-left: 5%;
+    text-align: right;
+}
+
+.head .page_view text {
+    margin-left: 3px;
+}
+
+.page_content {
+    width: 100%;
+    margin: 0 auto 15%;
+    position: relative;
+}
+
+.page_content .page_img {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+.page_content .page_img image {
+    width: 100%;
+    display: block;
+}
+
+.page_content .article {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.page_content .article rich-text {
+    font-size: 16px;
+    color: #495060;
+    font-weight: 300;
+    line-height: 26px;
+}
+
+.comment .com_tit text {
+    color: #495060;
+    font-size: 18px;
+    display: block;
+}
+
+.comment .com_tit em {
+    color: #80848f;
+    font-size: 15px;
+}
+
+.comment_list_li {
+    width: 98%;
+    margin: 1% auto 3%;
+    padding-top: 1%;
+}
+
+.comment_list_li .com_user {
+    height: 42px;
+}
+
+.comment_list_li .com_user image {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.comment_list_li .com_user text {
+    color: #495060;
+    font-size: 14px;
+    position: absolute;
+    padding-left: 10px;
+    line-height: 22px;
+}
+
+.i-tblueags {
+    font-size: 12px;
+    float: right;
+    /* padding-left:3px */
+}
+
+.comment_list_li .com_user em {
+    color: #80848f;
+    font-size: 12px;
+    position: absolute;
+    padding-top: 22px;
+    padding-left: 10px;
+}
+
+.comment_list_li .com_content {
+    width: 100%;
+}
+
+.comment_list_li .com_content rich-text {
+    color: #495060;
+    font-size: 14px;
+    display: block;
+    margin-left: 50px;
+    line-height: 24px;
+}
+
+.comment_input_cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.comment_input {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    /* height: 100px; */
+    padding-bottom: 43px;
+    z-index: 1000;
+}
+
+.page_foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+
+.page_foot .foot_btn {
+    width: 20%;
+    float: left;
+}
+
+.page_foot .foot_btn button {
+    width: 100%;
+    background: none;
+    color: #80848f;
+}
+
+.page_foot .foot_btn text {
+    color: #80848f;
+    font-size: 12px;
+}
+
+.page_foot .foot_btn em {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    line-height: 15px;
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    top: 13%;
+    left: 53%;
+}
+
+.phcolor {
+    color: #666;
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: 300 !important;
+}
+
+.feed-bottom-view-IPX {
+    /* iPhone X 内容往上偏移 68rpx */
+    padding-bottom: 68rpx;
+}
+
+.more-bottom-view-IPX {
+    /* iPhone X 内容往上偏移 88rpx */
+    padding-bottom: 88rpx;
+}
+.messBtn {
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 25px;
+    border: none;
+    background: none;
+    transform: none;
+}
+
+.messBtn::after {
+    border: none;
+}

@@ -1,0 +1,11 @@
+
+.timeout{
+	width: 50%;
+}
+
+button{
+	width: 40%;
+	border-radius: none;
+	color: #666;
+	font-size: 14px;
+}
