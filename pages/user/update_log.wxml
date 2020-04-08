@@ -1,0 +1,111 @@
+<view class="cu-timeline">
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v2.2</view>
+                <view class="cu-tag line-white">2018-04-02</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.修复首页透明层覆盖问题</view>
+                <view>2.优化文章页对刘海屏的适配</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v2.1</view>
+                <view class="cu-tag line-white">2018-03-06</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.整体页面使用colorUI组件</view>
+                <view>2.修改登录逻辑，新增游客模式</view>
+                <view>3.首页修改最终版</view>
+                <view>4.文章页面样式修改</view>
+                <view>5.正文使用towxml插件显示</view>
+                <view>6.正文底部适配iPhoneX</view>
+                <view>7.新增意见反馈</view>
+                <view>8.新增赞赏支持请多多支持</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v2.0</view>
+                <view class="cu-tag line-white">2018-02-27</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>全新改版2.0版本正式上线</view>
+                <view>1.小程序改名为YoungBlog小博客</view>
+                <view>2.重新设计小程序Logo</view>
+                <view>3.后台使用markdown编辑器代替富文本编辑器</view>
+                <view>4.首页样式重新设计</view>
+                <view>5.正文使用towxml插件显示</view>
+                <view>6.评论区支持回复他人</view>
+                <view>7.新增收藏、足迹页面标语</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v1.4</view>
+                <view class="cu-tag line-white">2018-12-29</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.修复图标错位问题</view>
+                <view>2.你的收藏新增左滑菜单（分享、删除）</view>
+                <view>3.浏览足迹新增左滑菜单（分享）</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v1.3</view>
+                <view class="cu-tag line-white">2018-10-12</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.修改首页样式</view>
+                <view>2.新增浏览足迹</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v1.2</view>
+                <view class="cu-tag line-white">2018-09-07</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.小程序更名为myBlog记录</view>
+                <view>2.文章新增评论功能</view>
+                <view>3.文章新增快速定位到评论区</view>
+                <view>4.正文使用wxParse插件显示</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v1.1</view>
+                <view class="cu-tag line-white">2018-08-01</view>
+            </view>
+            <view class='margin-top-sm text-content'>
+                <view>1.首页新增分类</view>
+                <view>2.首页新增返回顶部</view>
+                <view>3.使用iView组件重写整体样式</view>
+            </view>
+        </view>
+    </view>
+    <view class='cu-item text-cyan'>
+        <view class="bg-cyan content shadow-blur">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-cyan">v1.0</view>
+                <view class="cu-tag line-white">2018-07-19</view>
+            </view>
+            <view class='margin-top-sm text-content'>1.0版本正式上线</view>
+        </view>
+    </view>
+</view>

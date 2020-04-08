@@ -1,0 +1,43 @@
+.UCenter-bg {
+    /* background-image: url(https://image.weilanwl.com/color2.0/index.jpg); */
+    background-size: cover;
+    height: 370rpx;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 40rpx; */
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    /* color: #333; */
+    font-weight: 300;
+    /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.3); */
+}
+
+.UCenter-bg text {
+    opacity: 0.8;
+}
+
+.nickname {
+    margin-top: 20px;
+}
+
+.UCenter-bg button {
+	position: absolute;
+    width: 135rpx;
+    height: 135rpx;
+    border-radius: 50%;
+	z-index: 1000;
+	background: none;
+}
+
+
+.UCenter-bg image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.cu-btn.button-hover {
+    transform: none
+}

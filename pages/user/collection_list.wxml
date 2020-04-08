@@ -1,0 +1,49 @@
+<view class="flex" wx:if="{{!is_show_page}}">
+    <view class='bg-white flex-sub radius gif-loading'>
+        <image src='../../imgs/loading-white.gif' mode='aspectFit' class='gif-white response' style='height:240rpx'></image>
+    </view>
+</view>
+
+<block wx:if="{{is_show_page}}">
+    <view class="cu-load padding-top" role="" aria-label="">
+        纸上得来终觉浅，绝知此事要躬行
+    </view>
+
+    <!-- 分割线下 -->
+    <block wx:if="{{list}}">
+        <view class="cu-list menu menu-avatar padding-top">
+            <view wx:for="{{list}}" wx:key="list" class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" bindtouchstart='ListTouchStart' bindtouchmove='ListTouchMove' bindtouchend='ListTouchEnd' data-target="move-box-{{index}}">
+                <view class='content' data-a_id='{{item.a_id}}' bindtap='location'>
+                    <view class='text-grey hidden-text'>{{item.title}}</view>
+                    <view class="cu-capsule radius">
+                        <view class='cu-tag bg-blue sm'>
+                            <text class='icon-tag'></text>
+                        </view>
+                        <view class="cu-tag line-grey sm">
+                            {{item.cate_name}}
+                        </view>
+                    </view>
+                </view>
+                <view class='action' data-a_id='{{item.a_id}}' bindtap='location'>
+                    <view class='text-grey text-xs'>{{item.collection_time}}</view>
+                </view>
+                <view class='move'>
+                    <view class='bg-grey'>
+                        <button class='share-btn bg-grey' open-type='share' data-a_id='{{item.a_id}}' data-title='{{item.title}}' data-img='{{item.img}}'>
+                            分享
+                        </button>
+                    </view>
+                    <view class="bg-red" bindtap="deleteThis" data-a_id='{{item.a_id}}' data-indexdel='{{index}}'>删除</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="flex padding justify-center half-center">
+            <view class='padding-sm margin-xs radius'>
+                <text class="icon-emoji lg text-gray"></text>
+                <text class='lg text-gray'> 什么都没有</text>
+            </view>
+        </view>
+    </block>
+</block>

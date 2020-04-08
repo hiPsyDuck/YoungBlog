@@ -1,0 +1,76 @@
+<view class="flex" wx:if="{{!is_show_page}}">
+    <view class='bg-white flex-sub radius gif-loading'>
+        <image src='../../imgs/loading-white.gif' mode='aspectFit' class='gif-white response' style='height:240rpx'></image>
+    </view>
+</view>
+
+<block wx:if="{{is_show_page}}">
+    <view class='UCenter-bg'>
+        <form bindsubmit="save_formId" report-submit="true">
+            <button form-type='submit' open-type="getUserInfo" bindgetuserinfo="userLogin" lang="zh_CN" data-head='1'>
+            </button>
+            <image src='{{headimgurl}}' class='png' mode='widthFix'></image>
+        </form>
+        <view class='text-xl nickname text-gray'>{{nickname}}</view>
+
+    </view>
+
+    <view class="cu-list menu sm-border">
+        <view class="cu-item arrow">
+            <button class='cu-btn content' open-type="{{!needLogin?'getUserInfo':''}}" bindtap="{{needLogin?'location':''}}" data-url="../user/collection_list" bindgetuserinfo="{{!needLogin?'userLogin':''}}" lang="zh_CN">
+                <text class='icon-favor text-blue'></text>
+                <text class='text-grey'>你的收藏</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' bindtap='location' data-url="../user/recent_view">
+                <text class='icon-footprint text-orange'></text>
+                <text class='text-grey'>浏览足迹</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' bindtap='location' data-url="../user/update_log">
+                <text class='icon-activity text-cyan'></text>
+                <text class='text-grey'>更新日志</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' open-type='share'>
+                <text class='icon-forward text-mauve'></text>
+                <text class='text-grey'>分享给好友</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' bindtap='showQrcode'>
+                <text class='icon-redpacket text-red'></text>
+                <text class='text-grey'>赞赏支持</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' open-type='feedback'>
+                <text class='icon-question text-green'></text>
+                <text class='text-grey'>意见反馈</text>
+            </button>
+        </view>
+        <view class="cu-item arrow">
+            <button class='cu-btn content' bindtap='location' data-url="../user/about">
+                <text class='icon-profile text-yellow'></text>
+                <text class='text-grey'>一个关于</text>
+            </button>
+        </view>
+    </view>
+
+    <view class="cu-modal bottom-modal {{modalName=='Notice'?'show':''}}" bindtap='hideModal'>
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white">
+                <view class='action text-blue'>确定</view>
+                <view class='action text-green'>好的</view>
+            </view>
+            <view class='padding-xl'>
+                微信授权登录后才能使用这个功能哦
+            </view>
+        </view>
+    </view>
+
+
+</block>
